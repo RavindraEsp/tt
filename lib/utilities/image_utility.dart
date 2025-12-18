@@ -29,6 +29,11 @@ class ImageUtility {
 //
   // Icons
   static const String emailIcon = 'assets/icons/email_icon.png';
+  static const String userIcon = 'assets/icons/user_icon.png';
+  static const String gstIcon = 'assets/icons/gst_icon.png';
+  static const String maleIcon = 'assets/icons/male_icon.png';
+  static const String femaleIcon = 'assets/icons/female_icon.png';
+  static const String truckIcon = 'assets/icons/truck_icon.png';
 //   static const String castingIcon = 'assets/icons/casting_icon.png';
 //   static const String userIcon = 'assets/icons/user_icon.png';
 //   static const String eyeOpenIcon = 'assets/icons/eye_open_icon.png';

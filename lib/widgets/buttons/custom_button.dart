@@ -99,9 +99,9 @@ class CustomButton extends StatelessWidget {
     required this.buttonText,
     required this.onTap,
     this.type = ButtonType.fill,
-    this.borderColor = ColorUtility.colorE03939,
+    this.borderColor = ColorUtility.colorEA580C,
     this.textColor = Colors.white,
-    this.backgroundColor = ColorUtility.colorE03939,
+    this.backgroundColor = ColorUtility.colorEA580C,
   });
 
 
@@ -136,7 +136,8 @@ class CustomButton extends StatelessWidget {
             maxLines: 1,
             style: StyleUtility.buttonTextStyle.copyWith(
               color: type == ButtonType.border
-                  ? Colors.black
+                  ? ColorUtility.colorEA580C
+
                   : Colors.white,
             ),
           ),

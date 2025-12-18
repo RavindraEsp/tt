@@ -1,6 +1,12 @@
+import 'package:book_your_truck/utilities/color_utility.dart';
+import 'package:book_your_truck/utilities/enums.dart';
+import 'package:book_your_truck/utilities/image_utility.dart';
 import 'package:book_your_truck/utilities/style_utility.dart';
 import 'package:book_your_truck/utilities/text_size_utility.dart';
+import 'package:book_your_truck/widgets/buttons/custom_button.dart';
+import 'package:book_your_truck/widgets/textField/simple_text_field.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -12,6 +18,9 @@ class LoginScreen extends StatefulWidget {
 class _LoginScreenState extends State<LoginScreen> {
   int selectIndex = 0;
 
+  TextEditingController mobileNumberController = TextEditingController();
+  TextEditingController emailController = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
@@ -21,7 +30,6 @@ class _LoginScreenState extends State<LoginScreen> {
       // resizeToAvoidBottomInset: true,
       body: SafeArea(
         child: SingleChildScrollView(
-          physics: const BouncingScrollPhysics(),
           child: Column(
             children: [
               // ORANGE HEADER
@@ -32,18 +40,12 @@ class _LoginScreenState extends State<LoginScreen> {
                 child: Center(
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
-                    children: const [
-                      Icon(Icons.local_shipping, size: 80, color: Colors.white),
-                      SizedBox(height: 12),
-                      Text(
-                        "TOM'S TRANSPORTATION",
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 18,
-                          fontWeight: FontWeight.bold,
-                          letterSpacing: 1,
-                        ),
-                      ),
+                    children:  [
+                    Image.asset(ImageUtility.truckIcon,
+
+                    width: 197.w,)
+                      ,
+
                     ],
                   ),
                 ),
@@ -52,25 +54,23 @@ class _LoginScreenState extends State<LoginScreen> {
               // WHITE CARD SECTION
               Container(
                 width: double.infinity,
-                padding: const EdgeInsets.all(20),
-                decoration: const BoxDecoration(
-                  color: Colors.white,
+                padding: EdgeInsets.symmetric(horizontal: 22.w, vertical: 22.h),
+                decoration:  BoxDecoration(
+                 // color: ColorUtility.colorF5F6FA,
+                  color: ColorUtility.colorF5F6FA,
                   borderRadius: BorderRadius.vertical(top: Radius.circular(30)),
                 ),
+
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    const Text(
+                    Text(
                       "Sign in with",
-                      style: TextStyle(
-                        fontSize: 18,
-                        fontWeight: FontWeight.w600,
-                      ),
+                      style: StyleUtility.latoRegular18BlackTextStyle,
                     ),
 
-                    const SizedBox(height: 16),
+                    SizedBox(height: 21.h),
 
-                    // MOBILE / EMAIL TOGGLE
                     Row(
                       children: [
                         Expanded(
@@ -88,18 +88,20 @@ class _LoginScreenState extends State<LoginScreen> {
                             ),
                             label: Text(
                               "Mobile Number",
-                              style: TextStyle(
-                                color: selectIndex == 0
-                                    ? Colors.orange
-                                    : Colors.grey,
-                                fontSize: TextSizeUtility.textSize14,
-                              ),
+                              style: StyleUtility
+                                  .lato15RegularcolorEA580CTextStyle
+                                  .copyWith(
+                                    fontSize: TextSizeUtility.textSize10,
+                                    color: selectIndex == 0
+                                        ? ColorUtility.colorEA580C
+                                        : ColorUtility.colorB1B1B1,
+                                  ),
                             ),
                             style: OutlinedButton.styleFrom(
                               side: BorderSide(
                                 color: selectIndex == 0
-                                    ? Colors.orange
-                                    : Colors.grey,
+                                    ? ColorUtility.colorEA580C
+                                    : ColorUtility.colorB1B1B1,
                               ),
                               foregroundColor: Colors.orange,
                               shape: RoundedRectangleBorder(
@@ -119,12 +121,24 @@ class _LoginScreenState extends State<LoginScreen> {
                               print("Value is #$selectIndex");
                             },
                             icon: Icon(
-                              Icons.phone,
+                              Icons.email,
                               color: selectIndex == 1
-                                  ? Colors.orange
-                                  : Colors.grey,
+                                  ? ColorUtility.colorEA580C
+                                  : ColorUtility.colorB1B1B1,
                             ),
-                            label: const Text("Mobile Number"),
+                            label: Text(
+                              "Email ID",
+
+                              style: StyleUtility
+                                  .lato15RegularcolorEA580CTextStyle
+                                  .copyWith(
+                                    fontSize: TextSizeUtility.textSize10,
+
+                                    color: selectIndex == 1
+                                        ? ColorUtility.colorEA580C
+                                        : ColorUtility.colorB1B1B1,
+                                  ),
+                            ),
                             style: OutlinedButton.styleFrom(
                               side: BorderSide(
                                 color: selectIndex == 1
@@ -141,74 +155,58 @@ class _LoginScreenState extends State<LoginScreen> {
                       ],
                     ),
 
-                    const SizedBox(height: 20),
+                    SizedBox(height: 19.h),
 
-                    // MOBILE FIELD
-                    TextField(
-                      keyboardType: TextInputType.phone,
-                      decoration: InputDecoration(
-                        prefixIcon: const Padding(
-                          padding: EdgeInsets.all(12),
-                          child: Text("🇮🇳 +91"),
-                        ),
-                        hintText: "Enter your Mobile No.",
-                        border: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(30),
-                        ),
-                      ),
-                    ),
-
-                    const SizedBox(height: 20),
-
-                    // GET OTP BUTTON
-                    SizedBox(
-                      width: double.infinity,
-                      height: 50,
-                      child: ElevatedButton(
-                        onPressed: () {},
-                        style: ElevatedButton.styleFrom(
-                          backgroundColor: Colors.orange,
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(30),
+                    selectIndex == 0
+                        ? SimpleTextField(
+                            controller: mobileNumberController,
+                            hintText: "Enyer",
+                            title: "Mobile Number",
+                          )
+                        : SimpleTextField(
+                            controller: mobileNumberController,
+                            hintText: "Enter your Email ID",
+                            title: "Email",
                           ),
-                        ),
-                        child: const Text(
-                          "Get OTP",
-                          style: TextStyle(fontSize: 16),
-                        ),
-                      ),
-                    ),
+                    SizedBox(height: 18.h),
 
-                    const SizedBox(height: 16),
+                    CustomButton(buttonText: "Get OTP", onTap: () {}),
 
-                    // SIGN UP
-                    Center(
-                      child: Column(
+                    Padding(
+                      padding: EdgeInsets.symmetric(vertical: 26.h),
+                      child: Row(
                         children: [
-                          const Text("Don’t have an Account"),
-                          const SizedBox(height: 10),
-                          SizedBox(
-                            width: double.infinity,
-                            height: 50,
-                            child: OutlinedButton(
-                              onPressed: () {},
-                              style: OutlinedButton.styleFrom(
-                                side: const BorderSide(color: Colors.orange),
-                                shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(30),
-                                ),
-                              ),
-                              child: const Text(
-                                "Sign Up",
-                                style: TextStyle(
-                                  color: Colors.orange,
-                                  fontSize: 16,
-                                ),
-                              ),
+                          Expanded(
+                            child: Container(
+                              height: 1,
+                              color: ColorUtility.colorEA580C,
+                            ),
+                          ),
+
+                          Padding(
+                            padding: EdgeInsets.symmetric(horizontal: 13.w),
+                            child: Text(
+                              "Don’t have an Account",
+
+                              style: StyleUtility.latoRegularBlack13TextStyle,
+                            ),
+                          ),
+
+                          Expanded(
+                            child: Container(
+                              height: 1,
+                              color: ColorUtility.colorEA580C,
                             ),
                           ),
                         ],
                       ),
+                    ),
+
+                    CustomButton(
+                      buttonText: "Sign Up",
+
+                      type: ButtonType.border,
+                      onTap: () {},
                     ),
                   ],
                 ),

@@ -9,24 +9,67 @@ class StyleUtility {
   // StyleUtility._();
 
 
-  static TextStyle inputTextStyle = GoogleFonts.kantumruyPro(
-      fontWeight: FontWeight.w400,
-      fontSize: TextSizeUtility.textSize15,
+  static TextStyle inputTextStyle = GoogleFonts.manrope(
+      fontWeight: FontWeight.w500,
+      fontSize: TextSizeUtility.textSize14,
       color: Colors.black);
 
 
+  static TextStyle hintTextStyle = GoogleFonts.manrope(
+      fontWeight: FontWeight.w500,
+      fontSize: TextSizeUtility.textSize16,
+      color: ColorUtility.colorA8AEBF);
 
 
-  static TextStyle inputHeadingTextStyle = GoogleFonts.kantumruyPro(
+
+
+  static TextStyle inputHeadingTextStyle = GoogleFonts.manrope(
       fontWeight: FontWeight.w500,
       fontSize: TextSizeUtility.textSize16,
       color: Colors.black);
 
   static TextStyle buttonTextStyle = GoogleFonts.kantumruyPro(
-      fontWeight: FontWeight.w500,
-      fontSize: TextSizeUtility.textSize18.sp,
+      fontWeight: FontWeight.w400,
+      fontSize: TextSizeUtility.textSize14.sp,
       color: Colors.white
   );
+
+
+  static TextStyle latoRegularBlack13TextStyle = GoogleFonts.lato(
+      fontWeight: FontWeight.w400,
+      fontSize: TextSizeUtility.textSize13,
+      color: Colors.black
+  );
+
+
+
+
+  static TextStyle lato15RegularcolorEA580CTextStyle = GoogleFonts.lato(
+      fontWeight: FontWeight.w600,
+      fontSize: TextSizeUtility.textSize15,
+      color: ColorUtility.colorEA580C
+  );
+
+
+
+
+
+  static TextStyle latoRegular18BlackTextStyle = GoogleFonts.lato(
+      fontWeight: FontWeight.w400,
+      fontSize: TextSizeUtility.textSize18,
+      color: Colors.black
+  );
+
+
+
+  static TextStyle latoRegularEA580CTextStyle = GoogleFonts.lato(
+      fontWeight: FontWeight.w400,
+      fontSize: TextSizeUtility.textSize16,
+      color: ColorUtility.colorEA580C
+  );
+
+
+
 
   ///nnnn
 
@@ -48,10 +91,6 @@ class StyleUtility {
       //  fontSize: TextSizeUtility.textSize22,
       color: Colors.white);
 
-  static TextStyle hintTextStyle = GoogleFonts.quicksand(
-      fontWeight: FontWeight.w400,
-      fontSize: TextSizeUtility.textSize15,
-      color: ColorUtility.color9F9E9E);
 
 
 

@@ -1,3 +1,4 @@
+import 'package:book_your_truck/utilities/color_utility.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -7,7 +8,7 @@ import '../../utilities/text_size_utility.dart';
 
 class SimpleTextField extends StatelessWidget {
   const SimpleTextField({
-    Key? key,
+    super.key,
     required this.controller,
     required this.hintText,
     required this.title,
@@ -21,7 +22,7 @@ class SimpleTextField extends StatelessWidget {
     this.validator,
     this.isEnable = true,
     this.maxLength,
-  }) : super(key: key);
+  });
 
   final TextEditingController controller;
   final String hintText;
@@ -45,7 +46,7 @@ class SimpleTextField extends StatelessWidget {
       crossAxisAlignment: .start,
       children: [
         Text(title,style: StyleUtility.inputTextStyle,),
-        SizedBox(height: 7.h),
+        SizedBox(height: 9.h),
         SizedBox(
           height: 48,
           child: TextFormField(
@@ -61,7 +62,7 @@ class SimpleTextField extends StatelessWidget {
             textAlignVertical: TextAlignVertical.center,
             inputFormatters: inputFormatter,
             decoration: InputDecoration(
-              isDense: true,
+            //  isDense: true,
               contentPadding: EdgeInsets.only(
                 left: 20.w,
                 // top: 16,
@@ -72,9 +73,6 @@ class SimpleTextField extends StatelessWidget {
               fillColor: Colors.white,
               hintStyle: StyleUtility.hintTextStyle,
               hintText: hintText,
-              labelStyle: StyleUtility.labelTextStyle.copyWith(
-                fontSize: TextSizeUtility.textSize13.sp,
-              ),
               border: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(10.r),
                 borderSide: BorderSide.none,
@@ -106,7 +104,9 @@ class SimpleTextField extends StatelessWidget {
               prefixIcon: preffixImage != null
                   ? Padding(
                     padding:  EdgeInsets.all(12.sp),
-                    child: Image.asset(preffixImage!),
+                    child: Image.asset(preffixImage!,
+                    color:
+                      ColorUtility.color767C8C,),
                   )
                   : null,
               focusColor: Colors.white,
