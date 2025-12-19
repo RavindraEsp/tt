@@ -1,16 +1,8 @@
-import 'package:book_your_truck/utilities/enums.dart';
-import 'package:book_your_truck/utilities/image_utility.dart';
-import 'package:book_your_truck/widgets/buttons/custom_button.dart';
-import 'package:book_your_truck/widgets/textField/simple_text_field.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import 'module/auth/login_screen.dart';
-import 'module/auth/signup_screen.dart';
 import 'module/auth/verify_otp_screen.dart';
-import 'module/bottomabar/bottombar.dart';
-import 'module/profile/profile_screen.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -33,6 +25,8 @@ class MyApp extends StatelessWidget {
       // Use builder only if you need to use library outside ScreenUtilInit context
       builder: (_, child) {
         return MaterialApp(
+          debugShowCheckedModeBanner: false,
+
           title: 'First Method',
           // You can use the library anywhere in the app even in theme
           theme: ThemeData(
@@ -42,11 +36,11 @@ class MyApp extends StatelessWidget {
           home: child,
         );
       },
-     // child:  SignupScreen(),
-     // child:  LoginScreen(),
-     // child:  VerifyOtpScreen(),
-    //  child:  BottomNavigationBarScreen(),
-      child:  ProfileScreen(),
+      // child:  SignupScreen(),
+      // child:  LoginScreen(),
+      child: VerifyOtpScreen(),
+      //  child:  BottomNavigationBarScreen(),
+      // child:  ProfileScreen(),
     );
   }
 }

@@ -82,6 +82,18 @@ class StyleUtility {
       color: Colors.black);
 
 
+  static TextStyle manropeSemiBold18Color0E0E0E = GoogleFonts.manrope(
+      fontWeight: FontWeight.w600,
+      fontSize: TextSizeUtility.textSize18,
+      color: ColorUtility.color0E0E0E);
+
+
+
+  static TextStyle manropeMedium16Color848B9D = GoogleFonts.manrope(
+      fontWeight: FontWeight.w600,
+      fontSize: TextSizeUtility.textSize16,
+      color: ColorUtility.color848B9D);
+
 
   ///tttttt
 

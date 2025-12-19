@@ -29,17 +29,36 @@ class _VerifyOtpScreenState extends State<VerifyOtpScreen> {
           child: Column(
             crossAxisAlignment: .start,
             children: [
-              Text("Otp Verification", style: StyleUtility.inputTextStyle),
+              SizedBox(height: 20.h),
+              Text(
+                "Otp Verification",
+                style: StyleUtility.manropeSemiBold18Color0E0E0E,
+              ),
+              SizedBox(height: 16.h),
+              Text(
+                "We just sent you an SMS with 4-digit code. looks like very soon you will be logged in!",
+                style: StyleUtility.manropeMedium16Color848B9D,
+              ),
 
-              Text("Otp Verification", style: StyleUtility.inputTextStyle),
-
-              SizedBox(height: 40),
+              SizedBox(height: 28.h),
               Container(
                 alignment: Alignment.center,
                 child: CustomOtpField(controller: fNameController),
               ),
 
-              SizedBox(height: 150.h),
+              SizedBox(height: 28.h),
+
+              Container(
+                alignment: Alignment.center,
+                child: Text(
+                  "I haven’t received a code (0:03)",
+                  style: StyleUtility.manropeMedium16Color848B9D.copyWith(
+                    color: Colors.black.withValues(alpha: 0.8),
+                  ),
+                ),
+              ),
+
+              SizedBox(height: 114.h),
 
               CustomButton(buttonText: "Verify", onTap: () {}),
 
