@@ -1,3 +1,4 @@
+import 'package:book_your_truck/module/profile/profile_screen.dart';
 import 'package:book_your_truck/utilities/color_utility.dart';
 import 'package:book_your_truck/utilities/image_utility.dart';
 import 'package:book_your_truck/utilities/style_utility.dart';
@@ -40,14 +41,7 @@ class _BottomNavigationBarScreenState extends State<BottomNavigationBarScreen> {
         ],
       ),
     ),
-    Center(
-      child: Column(
-        children: [
-          SizedBox(height: 100),
-          Text("Fourth", style: StyleUtility.inputTextStyle),
-        ],
-      ),
-    ),
+    ProfileScreen()
   ];
 
   @override
@@ -61,6 +55,8 @@ class _BottomNavigationBarScreenState extends State<BottomNavigationBarScreen> {
         unselectedFontSize: 12.sp,
         showUnselectedLabels: true,
         selectedLabelStyle: StyleUtility.poppinRegular12colorEA580CTextStyle,
+        unselectedLabelStyle: StyleUtility.poppinRegular12colorEA580CTextStyle
+            .copyWith(color: ColorUtility.color484C52),
         onTap: (index) async {
           currentIndex = index;
 

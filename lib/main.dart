@@ -4,6 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'module/auth/verify_otp_screen.dart';
 import 'module/bottomabar/bottombar.dart';
+import 'module/profile/edit_profile_screen.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -40,7 +41,7 @@ class MyApp extends StatelessWidget {
       // child:  SignupScreen(),
       // child:  LoginScreen(),
     //  child: VerifyOtpScreen(),
-        child:  BottomNavigationBarScreen(),
+        child:  EditProfileScreen(),
       // child:  ProfileScreen(),
     );
   }

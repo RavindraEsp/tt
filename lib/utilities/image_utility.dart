@@ -38,6 +38,12 @@ class ImageUtility {
   static const String bookingIcon = 'assets/icons/booking_icon.png';
   static const String profileIcon = 'assets/icons/profile_icon.png';
   static const String helpIcon = 'assets/icons/help_icon.png';
+  static const String arrowRightIcon = 'assets/icons/arrow_right_icon.png';
+  static const String profileFillIcon = 'assets/icons/profile_fill_icon.png';
+  static const String supportIcon = 'assets/icons/suppot_icon.png';
+  static const String paymentHistoryIcon = 'assets/icons/payment_history_icon.png';
+  static const String tripHistoryIcon = 'assets/icons/trip_history_icon.png';
+  static const String logOutIcon = 'assets/icons/logout_icon.png';
 
 //
 //

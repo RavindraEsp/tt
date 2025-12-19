@@ -27,8 +27,8 @@ class StyleUtility {
       color: Colors.black);
 
   static TextStyle buttonTextStyle = GoogleFonts.kantumruyPro(
-      fontWeight: FontWeight.w400,
-      fontSize: TextSizeUtility.textSize14.sp,
+      fontWeight: FontWeight.w500,
+      fontSize: TextSizeUtility.textSize16.sp,
       color: Colors.white
   );
 
@@ -105,6 +105,29 @@ class StyleUtility {
       fontWeight: FontWeight.w400,
       fontSize: TextSizeUtility.textSize12,
       color: ColorUtility.colorEA580C);
+
+
+  //nunito
+
+
+
+  static TextStyle nunitoSemiBold15color132235TextStyle = GoogleFonts.nunito(
+      fontWeight: FontWeight.w600,
+      fontSize: TextSizeUtility.textSize15,
+      color: ColorUtility.color132235);
+
+
+  static TextStyle nunitoBold16colorBlackTextStyle = GoogleFonts.nunito(
+      fontWeight: FontWeight.w700,
+      fontSize: TextSizeUtility.textSize16,
+      color: Colors.black);
+
+  static TextStyle nunitoRegular14color364B63TextStyle = GoogleFonts.nunito(
+      fontWeight: FontWeight.w400,
+      fontSize: TextSizeUtility.textSize14,
+      color: ColorUtility.color364B63);
+
+
 
 
   ///tttttt
