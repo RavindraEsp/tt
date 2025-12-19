@@ -75,30 +75,43 @@ class SimpleTextField extends StatelessWidget {
               hintText: hintText,
               border: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(10.r),
-                borderSide: BorderSide.none,
+               // borderSide: BorderSide.none,
+                borderSide: const BorderSide(
+                  color: ColorUtility.textFieldBorderColor,
+                ),
               ),
               errorStyle: StyleUtility.errorTextStyle.copyWith(
                 fontSize: TextSizeUtility.textSize13.sp,
               ),
               disabledBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(10.r),
-                borderSide: BorderSide.none,
+                borderSide: const BorderSide(
+                  color: ColorUtility.textFieldBorderColor,
+                ),
               ),
               enabledBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(10.r),
-                borderSide: BorderSide.none,
+                borderSide: const BorderSide(
+                  color: ColorUtility.textFieldBorderColor,
+                ),
               ),
               focusedBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(10.r),
-                borderSide: BorderSide.none,
+                borderSide: const BorderSide(
+                  color: ColorUtility.textFieldBorderColor,
+                ),
               ),
               focusedErrorBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(10.r),
-                borderSide: BorderSide.none,
+                borderSide: const BorderSide(
+                  color: ColorUtility.textFieldBorderColor,
+                ),
               ),
               errorBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(10.r),
-                borderSide: BorderSide.none,
+                borderSide: const BorderSide(
+                  color: ColorUtility.textFieldBorderColor,
+                ),
               ),
 
               prefixIcon: preffixImage != null

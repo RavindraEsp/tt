@@ -11,6 +11,10 @@ class ColorUtility {
   static const Color colorA8AEBF = Color(0xFFA8AEBF);
 
 
+  static const Color backgroundColor = Color(0xFFF5F6FA);
+  static const Color textFieldBorderColor = Color(0xFFB1B1B1);
+
+
 
 
 

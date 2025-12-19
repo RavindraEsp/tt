@@ -21,8 +21,6 @@ class StyleUtility {
       color: ColorUtility.colorA8AEBF);
 
 
-
-
   static TextStyle inputHeadingTextStyle = GoogleFonts.manrope(
       fontWeight: FontWeight.w500,
       fontSize: TextSizeUtility.textSize16,
@@ -72,6 +70,26 @@ class StyleUtility {
 
 
   ///nnnn
+
+
+
+
+
+
+  static TextStyle appBarTextStyle = GoogleFonts.manrope(
+      fontWeight: FontWeight.w500,
+      fontSize: TextSizeUtility.textSize16,
+      color: Colors.black);
+
+
+
+  ///tttttt
+
+
+
+
+
+
 
 
 
