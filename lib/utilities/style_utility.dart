@@ -95,6 +95,18 @@ class StyleUtility {
       color: ColorUtility.color848B9D);
 
 
+
+
+  //poppin
+
+
+
+  static TextStyle poppinRegular12colorEA580CTextStyle = GoogleFonts.poppins(
+      fontWeight: FontWeight.w400,
+      fontSize: TextSizeUtility.textSize12,
+      color: ColorUtility.colorEA580C);
+
+
   ///tttttt
 
 

@@ -58,9 +58,9 @@ class _BottomNavigationBarScreenState extends State<BottomNavigationBarScreen> {
         backgroundColor: Colors.white,
         selectedItemColor: ColorUtility.colorEA580C,
         unselectedItemColor: ColorUtility.textFieldBorderColor,
-        unselectedFontSize: 12,
+        unselectedFontSize: 12.sp,
         showUnselectedLabels: true,
-        selectedLabelStyle: StyleUtility.inputTextStyle,
+        selectedLabelStyle: StyleUtility.poppinRegular12colorEA580CTextStyle,
         onTap: (index) async {
           currentIndex = index;
 
@@ -68,10 +68,20 @@ class _BottomNavigationBarScreenState extends State<BottomNavigationBarScreen> {
         },
         currentIndex: currentIndex,
         items: [
-          bottomNavBarItem(currentIndex, 0, "Steps", ImageUtility.maleIcon),
-          bottomNavBarItem(currentIndex, 1, "Activity", ImageUtility.maleIcon),
-          bottomNavBarItem(currentIndex, 2, "NFTs Box", ImageUtility.maleIcon),
-          bottomNavBarItem(currentIndex, 3, "Wallet", ImageUtility.maleIcon),
+          bottomNavBarItem(currentIndex, 0, "Home", ImageUtility.homeIcon),
+          bottomNavBarItem(
+            currentIndex,
+            1,
+            "Bookings",
+            ImageUtility.bookingIcon,
+          ),
+          bottomNavBarItem(currentIndex, 2, "Help", ImageUtility.helpIcon),
+          bottomNavBarItem(
+            currentIndex,
+            3,
+            "Profile",
+            ImageUtility.profileIcon,
+          ),
         ],
       ),
 
