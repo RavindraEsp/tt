@@ -3,12 +3,17 @@ import 'package:book_your_truck/utilities/image_utility.dart';
 import 'package:book_your_truck/widgets/buttons/custom_button.dart';
 import 'package:book_your_truck/widgets/textField/simple_text_field.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'module/auth/login_screen.dart';
 import 'module/auth/signup_screen.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+
+  await SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
+
   runApp(const MyApp());
 }
 

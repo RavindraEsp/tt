@@ -269,63 +269,212 @@ class _LoginScreenState extends State<LoginScreen> {
                                 SizedBox(height: 21.h),
 
                                 /// Buttons row
+                                ///
+                                ///    Row(
+                                //                 children: [
+                                //                   Expanded(
+                                //                     child: InkWell(
+                                //                       onTap: () {
+                                //                         setState(() {
+                                //                           gender = 2;
+                                //                         });
+                                //                       },
+                                //                       child: Container(
+                                //                         height: TextSizeUtility.buttonHeight,
+                                //                         decoration: BoxDecoration(
+                                //                           borderRadius: BorderRadius.circular(50.r),
+                                //                           color: gender == 2
+                                //                               ? ColorUtility.colorEA580C
+                                //                               : Colors.white,
+                                //                         ),
+                                //
+                                //                         child: Row(
+                                //                           crossAxisAlignment: CrossAxisAlignment.center,
+                                //                           mainAxisAlignment: MainAxisAlignment.center,
+                                //                           children: [
+                                //                           Image.asset(ImageUtility.femaleIcon,width: 12.w,
+                                //                             color: gender == 2
+                                //                                 ? Colors.white
+                                //                                 : ColorUtility.color767C8C,),
+                                //
+                                //                             SizedBox(width: 7.w),
+                                //
+                                //                             Text(
+                                //                               "Female",
+                                //                               style: StyleUtility.buttonTextStyle.copyWith(
+                                //                                 color: gender == 2
+                                //                                     ? Colors.white
+                                //                                     : ColorUtility.color767C8C,
+                                //                               ),
+                                //                             ),
+                                //                           ],
+                                //                         ),
+                                //                       ),
+                                //                     ),
+                                //                   ),
+                                //
+                                //                   SizedBox(width: 20.w),
+                                //
+                                //                   Expanded(
+                                //                     child: InkWell(
+                                //                       onTap: () {
+                                //                         setState(() {
+                                //                           gender = 1;
+                                //                         });
+                                //                       },
+                                //                       child: Container(
+                                //                         height: TextSizeUtility.buttonHeight,
+                                //                         decoration: BoxDecoration(
+                                //                           borderRadius: BorderRadius.circular(20.r),
+                                //                           color: gender == 1
+                                //                               ? ColorUtility.colorEA580C
+                                //                               : Colors.white,
+                                //                         ),
+                                //
+                                //                         child: Row(
+                                //                           crossAxisAlignment: CrossAxisAlignment.center,
+                                //                           mainAxisAlignment: MainAxisAlignment.center,
+                                //                           children: [
+                                //                             Image.asset(ImageUtility.maleIcon,width: 12.w,
+                                //
+                                //                               color: gender == 1
+                                //                                   ? Colors.white
+                                //                                   : ColorUtility.color767C8C,
+                                //                             ),
+                                //
+                                //                             SizedBox(width: 7.w),
+                                //
+                                //                             Text(
+                                //                               "Male",
+                                //                               style: StyleUtility.buttonTextStyle.copyWith(
+                                //                                 color: gender == 1
+                                //                                     ? Colors.white
+                                //                                     : ColorUtility.color767C8C,
+                                //                               ),
+                                //                             ),
+                                //                           ],
+                                //                         ),
+                                //                       ),
+                                //                     ),
+                                //                   ),
+                                //                 ],
+                                //               ),
                                 Row(
                                   children: [
                                     Expanded(
-                                      child: OutlinedButton.icon(
-                                        onPressed: () {
-                                          setState(() => selectIndex = 0);
+                                      child: InkWell(
+                                        onTap: () {
+                                          setState(() {
+                                            selectIndex = 0;
+                                          });
                                         },
-                                        icon: Icon(
-                                          Icons.phone,
-                                          color: selectIndex == 0
-                                              ? Colors.orange
-                                              : Colors.grey,
-                                        ),
-                                        label: Text(
-                                          "Mobile Number",
-                                          style: StyleUtility
-                                              .lato15RegularcolorEA580CTextStyle
-                                              .copyWith(
-                                                fontSize:
-                                                    TextSizeUtility.textSize10,
+                                        child: Container(
+                                          height: TextSizeUtility.buttonHeight,
+                                          decoration: BoxDecoration(
+                                            color: Colors.white,
+                                            borderRadius: BorderRadius.circular(
+                                              20.r,
+                                            ),
+                                            border: Border.all(
+                                              color: selectIndex == 0
+                                                  ? ColorUtility.colorEA580C
+                                                  : ColorUtility.color767C8C,
+                                            ),
+                                          ),
+
+                                          child: Row(
+                                            crossAxisAlignment:
+                                                CrossAxisAlignment.center,
+                                            mainAxisAlignment:
+                                                MainAxisAlignment.center,
+                                            children: [
+                                              Image.asset(
+                                                ImageUtility.maleIcon,
+                                                width: 12.w,
+
                                                 color: selectIndex == 0
                                                     ? ColorUtility.colorEA580C
-                                                    : ColorUtility.colorB1B1B1,
+                                                    : ColorUtility.color767C8C,
                                               ),
-                                        ),
-                                        style: OutlinedButton.styleFrom(
-                                          shape: RoundedRectangleBorder(
-                                            borderRadius: BorderRadius.circular(
-                                              30,
-                                            ),
+
+                                              SizedBox(width: 7.w),
+
+                                              Text(
+                                                "Mobile Number",
+                                                style: StyleUtility
+                                                    .lato15RegularcolorEA580CTextStyle
+                                                    .copyWith(
+                                                      // fontSize:
+                                                      // TextSizeUtility.textSize10,
+                                                      color: selectIndex == 0
+                                                          ? ColorUtility
+                                                                .colorEA580C
+                                                          : ColorUtility
+                                                                .colorB1B1B1,
+                                                    ),
+                                              ),
+                                            ],
                                           ),
                                         ),
                                       ),
                                     ),
+
                                     const SizedBox(width: 10),
+
                                     Expanded(
-                                      child: OutlinedButton.icon(
-                                        onPressed: () {
-                                          setState(() => selectIndex = 1);
+                                      child: InkWell(
+                                        onTap: () {
+                                          setState(() {
+                                            selectIndex = 1;
+                                          });
                                         },
-                                        icon: Icon(
-                                          Icons.email,
-                                          color: selectIndex == 1
-                                              ? ColorUtility.colorEA580C
-                                              : ColorUtility.colorB1B1B1,
-                                        ),
-                                        label: Text(
-                                          "Email ID",
-                                          style: StyleUtility
-                                              .lato15RegularcolorEA580CTextStyle
-                                              .copyWith(
-                                                fontSize:
-                                                    TextSizeUtility.textSize10,
+                                        child: Container(
+                                          height: TextSizeUtility.buttonHeight,
+                                          decoration: BoxDecoration(
+                                            color: Colors.white,
+                                            borderRadius: BorderRadius.circular(
+                                              20.r,
+                                            ),
+                                            border: Border.all(
+                                              color: selectIndex == 1
+                                                  ? ColorUtility.colorEA580C
+                                                  : ColorUtility.color767C8C,
+                                            ),
+                                          ),
+
+                                          child: Row(
+                                            crossAxisAlignment:
+                                                CrossAxisAlignment.center,
+                                            mainAxisAlignment:
+                                                MainAxisAlignment.center,
+                                            children: [
+                                              Image.asset(
+                                                ImageUtility.maleIcon,
+                                                width: 12.w,
+
                                                 color: selectIndex == 1
                                                     ? ColorUtility.colorEA580C
-                                                    : ColorUtility.colorB1B1B1,
+                                                    : ColorUtility.color767C8C,
                                               ),
+
+                                              SizedBox(width: 7.w),
+
+                                              Text(
+                                                "Email ID",
+                                                style: StyleUtility
+                                                    .lato15RegularcolorEA580CTextStyle
+                                                    .copyWith(
+                                                      // fontSize:
+                                                      // TextSizeUtility.textSize10,
+                                                      color: selectIndex == 1
+                                                          ? ColorUtility
+                                                                .colorEA580C
+                                                          : ColorUtility
+                                                                .colorB1B1B1,
+                                                    ),
+                                              ),
+                                            ],
+                                          ),
                                         ),
                                       ),
                                     ),
