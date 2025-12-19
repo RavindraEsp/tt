@@ -77,8 +77,8 @@ class StyleUtility {
 
 
   static TextStyle appBarTextStyle = GoogleFonts.manrope(
-      fontWeight: FontWeight.w500,
-      fontSize: TextSizeUtility.textSize16,
+      fontWeight: FontWeight.w600,
+      fontSize: TextSizeUtility.textSize18,
       color: Colors.black);
 
 
@@ -86,6 +86,16 @@ class StyleUtility {
       fontWeight: FontWeight.w600,
       fontSize: TextSizeUtility.textSize18,
       color: ColorUtility.color0E0E0E);
+
+  static TextStyle manropeMedium16Color1E1E2D = GoogleFonts.manrope(
+      fontWeight: FontWeight.w600,
+      fontSize: TextSizeUtility.textSize18,
+      color: ColorUtility.color1E1E2D);
+
+  static TextStyle manropeMedium14Color767C8C = GoogleFonts.manrope(
+      fontWeight: FontWeight.w500,
+      fontSize: TextSizeUtility.textSize14,
+      color: ColorUtility.color767C8C);
 
 
 

@@ -4,6 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'module/auth/verify_otp_screen.dart';
 import 'module/bottomabar/bottombar.dart';
+import 'module/paymentHistory/payment_history_screen.dart';
 import 'module/profile/edit_profile_screen.dart';
 
 void main() async {
@@ -41,7 +42,8 @@ class MyApp extends StatelessWidget {
       // child:  SignupScreen(),
       // child:  LoginScreen(),
     //  child: VerifyOtpScreen(),
-        child:  EditProfileScreen(),
+      //  child:  EditProfileScreen(),
+        child:  PaymentHistoryScreen(),
       // child:  ProfileScreen(),
     );
   }
