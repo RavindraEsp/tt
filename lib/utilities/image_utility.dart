@@ -27,6 +27,7 @@ class ImageUtility {
 //       'assets/images/dummy_video_thumbnail_image.png';
    static const String truckCheckPriceImage = 'assets/images/truck_check_price.png';
    static const String dummyTruckCardImage = 'assets/images/dummy_truck_card.png';
+   static const String splashBgImage = 'assets/images/splash_bg.png';
 //
   // Icons
   static const String emailIcon = 'assets/icons/email_icon.png';

@@ -1,4 +1,5 @@
 import 'package:book_your_truck/module/bottomabar/dashboard/select_location_screen.dart';
+import 'package:book_your_truck/module/bottomabar/dashboard/track/track_truck_screen.dart';
 import 'package:book_your_truck/utilities/color_utility.dart';
 import 'package:book_your_truck/utilities/image_utility.dart';
 import 'package:book_your_truck/utilities/style_utility.dart';
@@ -253,6 +254,7 @@ class _CheckPriceCard extends StatelessWidget {
       padding: EdgeInsets.all(16.w),
       decoration: BoxDecoration(
         color: Colors.white,
+
         borderRadius: BorderRadius.circular(16.r),
         border: Border.all(color: ColorUtility.cardBorderColor2),
       ),
@@ -378,7 +380,15 @@ class _ActiveTruckCard extends StatelessWidget {
             ],
           ),
           const SizedBox(height: 20),
-          CustomButton(buttonText: "Track Truck", onTap: () {}),
+          CustomButton(buttonText: "Track Truck", onTap: () {
+
+
+            // Navigator.push(
+            //   context,
+            //   MaterialPageRoute(builder: (context) => LiveTrackScreen()),
+            // );
+
+          }),
         ],
       ),
     );
