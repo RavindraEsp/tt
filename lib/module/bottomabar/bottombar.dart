@@ -1,3 +1,4 @@
+import 'package:book_your_truck/module/bottomabar/dashboard/dashboard_screen.dart';
 import 'package:book_your_truck/module/profile/profile_screen.dart';
 import 'package:book_your_truck/utilities/color_utility.dart';
 import 'package:book_your_truck/utilities/image_utility.dart';
@@ -20,14 +21,7 @@ class _BottomNavigationBarScreenState extends State<BottomNavigationBarScreen> {
   int currentIndex = 0;
 
   List bottombarScreensList = [
-    Center(
-      child: Column(
-        children: [
-          SizedBox(height: 100),
-          Text("Dashboard", style: StyleUtility.inputTextStyle),
-        ],
-      ),
-    ),
+    DashboardScreen(),
     MyBookingsScreen(),
     HelpScreen(),
     ProfileScreen()

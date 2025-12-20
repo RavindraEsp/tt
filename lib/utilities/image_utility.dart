@@ -25,7 +25,8 @@ class ImageUtility {
 //       'assets/images/dummy_applied_user_image2.png';
 //   static const String dummyVideoThumbnailImage =
 //       'assets/images/dummy_video_thumbnail_image.png';
-//   static const String dummyAudioImage = 'assets/images/dummy_audio_image.png';
+   static const String truckCheckPriceImage = 'assets/images/truck_check_price.png';
+   static const String dummyTruckCardImage = 'assets/images/dummy_truck_card.png';
 //
   // Icons
   static const String emailIcon = 'assets/icons/email_icon.png';
@@ -44,6 +45,11 @@ class ImageUtility {
   static const String paymentHistoryIcon = 'assets/icons/payment_history_icon.png';
   static const String tripHistoryIcon = 'assets/icons/trip_history_icon.png';
   static const String logOutIcon = 'assets/icons/logout_icon.png';
+  static const String unLoadingIconIcon = 'assets/icons/un_loading_icon.png';
+  static const String latterIcon = 'assets/icons/latter_icon.png';
+  static const String nowIcon = 'assets/icons/now_icon.png';
+  static const String calenderIcon = 'assets/icons/calender_icon.png';
+  static const String timeIcon = 'assets/icons/time_icon.png';
 
 //
 //

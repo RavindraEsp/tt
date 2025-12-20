@@ -87,6 +87,42 @@ class StyleUtility {
       fontSize: TextSizeUtility.textSize18,
       color: ColorUtility.color0E0E0E);
 
+
+  static TextStyle manropeBold14Color1A2530 = GoogleFonts.manrope(
+      fontWeight: FontWeight.bold,
+      fontSize: TextSizeUtility.textSize14,
+      color: ColorUtility.color1A2530);
+
+  static TextStyle manropeMedium14Color8D98AF = GoogleFonts.manrope(
+      fontWeight: FontWeight.w500,
+      fontSize: TextSizeUtility.textSize14,
+      color: ColorUtility.color8D98AF);
+
+
+
+
+
+
+
+
+
+
+  static TextStyle manropeSemiBold12ColorBlack = GoogleFonts.manrope(
+      fontWeight: FontWeight.w600,
+      fontSize: TextSizeUtility.textSize12,
+      color: Colors.black);
+
+  static TextStyle manropeSemiBold12Color474C59 = GoogleFonts.manrope(
+      fontWeight: FontWeight.w600,
+      fontSize: TextSizeUtility.textSize12,
+      color: ColorUtility.color474C59);
+
+
+
+
+
+
+
   static TextStyle manropeMedium16Color1E1E2D = GoogleFonts.manrope(
       fontWeight: FontWeight.w600,
       fontSize: TextSizeUtility.textSize18,
@@ -96,6 +132,16 @@ class StyleUtility {
       fontWeight: FontWeight.w500,
       fontSize: TextSizeUtility.textSize14,
       color: ColorUtility.color767C8C);
+
+  static TextStyle manropeMedium10Color6E6E6E = GoogleFonts.manrope(
+      fontWeight: FontWeight.w500,
+      fontSize: TextSizeUtility.textSize10,
+      color: ColorUtility.color6E6E6E);
+
+
+
+
+
 
   static TextStyle manropeMedium10ColorWhite = GoogleFonts.manrope(
       fontWeight: FontWeight.w500,

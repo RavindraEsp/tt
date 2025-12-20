@@ -2,6 +2,7 @@
 import 'package:book_your_truck/utilities/color_utility.dart';
 import 'package:book_your_truck/utilities/image_utility.dart';
 import 'package:book_your_truck/utilities/style_utility.dart';
+import 'package:book_your_truck/widgets/common_app_bar.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -34,6 +35,7 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: ColorUtility.backgroundColor,
+      appBar: commonAppBar(title: "View Profile"),
       body: SafeArea(
         child: SingleChildScrollView(
           child: Padding(
