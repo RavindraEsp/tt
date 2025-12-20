@@ -1,3 +1,4 @@
+import 'package:book_your_truck/module/bottomabar/dashboard/select_transporter/select_transporter_screen.dart';
 import 'package:book_your_truck/utilities/color_utility.dart';
 import 'package:book_your_truck/utilities/image_utility.dart';
 import 'package:book_your_truck/utilities/style_utility.dart';
@@ -122,8 +123,13 @@ class _RideBottomSheetState extends State<RideBottomSheet> {
 
   Widget _radioTile(String title, String image) {
     return ListTile(
-      leading: Image.asset(image, width: 28.w,height: 28.w, fit: BoxFit.contain),
-      title: Text(title,style: StyleUtility.manropeMedium14colorBlack,),
+      leading: Image.asset(
+        image,
+        width: 28.w,
+        height: 28.w,
+        fit: BoxFit.contain,
+      ),
+      title: Text(title, style: StyleUtility.manropeMedium14colorBlack),
       trailing: Radio<String>(
         activeColor: ColorUtility.colorEA580C,
         value: title,
@@ -139,7 +145,7 @@ class _RideBottomSheetState extends State<RideBottomSheet> {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-         Text(
+        Text(
           "Select your date and time",
           style: StyleUtility.manropeMedium14colorBlack.copyWith(
             fontSize: TextSizeUtility.textSize18,
@@ -173,7 +179,6 @@ class _RideBottomSheetState extends State<RideBottomSheet> {
               ? "Pick right time"
               : selectedTime!.format(context),
           onTap: () async {
-
             final time = await showTimePicker(
               context: context,
               initialTime: TimeOfDay.now(),
@@ -187,8 +192,6 @@ class _RideBottomSheetState extends State<RideBottomSheet> {
                 );
               },
             );
-
-
 
             // final time = await showTimePicker(
             //   context: context,
@@ -218,7 +221,7 @@ class _RideBottomSheetState extends State<RideBottomSheet> {
         ),
         child: Row(
           children: [
-            Image.asset(icon,width:28.w,),
+            Image.asset(icon, width: 28.w),
             const SizedBox(width: 12),
             Text(text, style: StyleUtility.hintTextStyle),
           ],
@@ -227,24 +230,28 @@ class _RideBottomSheetState extends State<RideBottomSheet> {
     );
   }
 
-
   Widget _nextButton() {
-    return CustomButton(buttonText: "Next", onTap: (){
+    return CustomButton(
+      buttonText: "Next",
+      onTap: () {
+        setState(() {
+          if (currentStep == RideStep.preference) {
+            currentStep = RideStep.dateTime;
+          } else {
+            Navigator.pop(context);
 
-      setState(() {
-        if (currentStep == RideStep.preference) {
-          currentStep = RideStep.dateTime;
-        } else {
-          Navigator.pop(context);
-        }
-      });
-    });
+            Navigator.push(
+              context,
+
+              MaterialPageRoute(
+                builder: (context) => SelectTransporterScreen(),
+              ),
+            );
+          }
+        });
+      },
+    );
   }
-
-
-
-
-
 }
 
 class _LocationInputCard extends StatelessWidget {

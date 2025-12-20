@@ -34,12 +34,11 @@ class _BottomNavigationBarScreenState extends State<BottomNavigationBarScreen> {
         type: BottomNavigationBarType.fixed,
         backgroundColor: Colors.white,
         selectedItemColor: ColorUtility.colorEA580C,
-        unselectedItemColor: ColorUtility.textFieldBorderColor,
+        unselectedItemColor: ColorUtility.color484C52,
         unselectedFontSize: 12.sp,
         showUnselectedLabels: true,
         selectedLabelStyle: StyleUtility.poppinRegular12colorEA580CTextStyle,
-        unselectedLabelStyle: StyleUtility.poppinRegular12colorEA580CTextStyle
-            .copyWith(color: ColorUtility.color484C52),
+        unselectedLabelStyle: StyleUtility.poppinRegular12colorEA580CTextStyle,
         onTap: (index) async {
           currentIndex = index;
 

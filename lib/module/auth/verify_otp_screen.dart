@@ -6,6 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../utilities/color_utility.dart';
+import '../bottomabar/bottombar.dart';
 
 class VerifyOtpScreen extends StatefulWidget {
   const VerifyOtpScreen({super.key});
@@ -60,7 +61,15 @@ class _VerifyOtpScreenState extends State<VerifyOtpScreen> {
 
               SizedBox(height: 114.h),
 
-              CustomButton(buttonText: "Verify", onTap: () {}),
+              CustomButton(buttonText: "Verify", onTap: () {
+
+                Navigator.pushAndRemoveUntil(
+                  context,
+                  MaterialPageRoute(builder: (_) => const BottomNavigationBarScreen()),
+                      (route) => false, // ❗ removes all previous routes
+                );
+
+              }),
 
               SizedBox(height: 35.h),
             ],

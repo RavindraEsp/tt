@@ -98,6 +98,13 @@ class StyleUtility {
       fontSize: TextSizeUtility.textSize14,
       color: ColorUtility.color8D98AF);
 
+  static TextStyle manropeSemiBold14Color1A2530= GoogleFonts.manrope(
+      fontWeight: FontWeight.w600,
+      fontSize: TextSizeUtility.textSize14,
+      color: ColorUtility.color1A2530);
+
+
+
 
 
 
@@ -185,6 +192,13 @@ class StyleUtility {
       fontWeight: FontWeight.w500,
       fontSize: TextSizeUtility.textSize14,
       color: Colors.black);
+
+
+  static TextStyle manropeMedium16Color767C8C = GoogleFonts.manrope(
+      fontWeight: FontWeight.w500,
+      fontSize: TextSizeUtility.textSize16,
+      color: ColorUtility.color767C8C);
+
 
 
 

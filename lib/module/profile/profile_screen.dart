@@ -85,6 +85,12 @@ class _ProfileScreenState extends State<ProfileScreen> {
               icon: ImageUtility.logOutIcon,
               isSuffix: false,
               onTap: (){
+
+                Navigator.pushAndRemoveUntil(
+                  context,
+                  MaterialPageRoute(builder: (_) => const LoginScreen()),
+                      (route) => false, // ❗ removes all previous routes
+                );
               },
             ),
           ],

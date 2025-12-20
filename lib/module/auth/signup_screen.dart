@@ -1,3 +1,4 @@
+import 'package:book_your_truck/module/auth/verify_otp_screen.dart';
 import 'package:book_your_truck/utilities/color_utility.dart';
 import 'package:book_your_truck/utilities/style_utility.dart';
 import 'package:book_your_truck/utilities/text_size_utility.dart';
@@ -6,7 +7,6 @@ import 'package:book_your_truck/widgets/textField/mobile_number_text_field.dart'
 import 'package:book_your_truck/widgets/textField/simple_text_field.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:intl_phone_field/phone_number.dart';
 
 import '../../utilities/image_utility.dart';
 import '../../widgets/buttons/custom_button.dart';
@@ -32,7 +32,7 @@ class _SignupScreenState extends State<SignupScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: ColorUtility.colorF5F6FA,
+     backgroundColor: ColorUtility.colorF5F6FA,
 
       appBar: commonAppBar(title: "Sign Up"),
 
@@ -187,7 +187,17 @@ class _SignupScreenState extends State<SignupScreen> {
                 ),
 
                 SizedBox(height: 77.h),
-                CustomButton(buttonText: "Sign up", onTap: () {}),
+                CustomButton(
+                  buttonText: "Sign up",
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => VerifyOtpScreen(),
+                      ),
+                    );
+                  },
+                ),
 
                 SizedBox(height: 32.h),
               ],

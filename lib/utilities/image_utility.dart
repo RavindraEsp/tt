@@ -50,6 +50,8 @@ class ImageUtility {
   static const String nowIcon = 'assets/icons/now_icon.png';
   static const String calenderIcon = 'assets/icons/calender_icon.png';
   static const String timeIcon = 'assets/icons/time_icon.png';
+  static const String phonePayIcon = 'assets/icons/phone_pay_icon.png';
+  static const String successIcon = 'assets/icons/success_icon.png';
 
 //
 //

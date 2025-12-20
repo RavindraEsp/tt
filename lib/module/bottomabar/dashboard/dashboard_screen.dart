@@ -6,6 +6,8 @@ import 'package:book_your_truck/widgets/buttons/custom_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+import '../notification/notification_screen.dart';
+
 class DashboardScreen extends StatelessWidget {
   const DashboardScreen({super.key});
 
@@ -58,26 +60,37 @@ class _Header extends StatelessWidget {
             ],
           ),
         ),
-        Stack(
-          children: [
-            Icon(
-              Icons.notifications_none,
-              size: 28,
-              color: ColorUtility.color1F2937,
-            ),
-            Positioned(
-              right: 2,
-              top: 2,
-              child: Container(
-                width: 8,
-                height: 8,
-                decoration: const BoxDecoration(
-                  color: Colors.red,
-                  shape: BoxShape.circle,
+        InkWell(
+          onTap: (){
+
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => NotificationScreen()),
+            );
+
+
+          },
+          child: Stack(
+            children: [
+              Icon(
+                Icons.notifications_none,
+                size: 28,
+                color: ColorUtility.color1F2937,
+              ),
+              Positioned(
+                right: 2,
+                top: 2,
+                child: Container(
+                  width: 8,
+                  height: 8,
+                  decoration: const BoxDecoration(
+                    color: Colors.red,
+                    shape: BoxShape.circle,
+                  ),
                 ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ],
     );
