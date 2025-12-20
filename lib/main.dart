@@ -1,9 +1,11 @@
+import 'package:book_your_truck/utilities/trip_history_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'module/auth/verify_otp_screen.dart';
 import 'module/bottomabar/bottombar.dart';
+import 'module/bottomabar/help/help_screen.dart';
 import 'module/paymentHistory/payment_history_screen.dart';
 import 'module/profile/edit_profile_screen.dart';
 
@@ -43,8 +45,11 @@ class MyApp extends StatelessWidget {
       // child:  LoginScreen(),
     //  child: VerifyOtpScreen(),
       //  child:  EditProfileScreen(),
-        child:  PaymentHistoryScreen(),
+       // child:  PaymentHistoryScreen(),
+       //child:  TripsHistoryScreen(),
+      //  child:  HelpScreen(),
       // child:  ProfileScreen(),
+       child:  BottomNavigationBarScreen(),
     );
   }
 }

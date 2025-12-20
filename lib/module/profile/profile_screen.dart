@@ -1,6 +1,10 @@
+import 'package:book_your_truck/module/auth/login_screen.dart';
+import 'package:book_your_truck/module/paymentHistory/payment_history_screen.dart';
+import 'package:book_your_truck/module/profile/edit_profile_screen.dart';
 import 'package:book_your_truck/utilities/color_utility.dart';
 import 'package:book_your_truck/utilities/image_utility.dart';
 import 'package:book_your_truck/utilities/style_utility.dart';
+import 'package:book_your_truck/utilities/trip_history_screen.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -21,14 +25,15 @@ class _ProfileScreenState extends State<ProfileScreen> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            SizedBox(height: 45.h),
+            SizedBox(height: 25.h),
 
             Container(
               width: 135,
               height: 135,
               child: ClipOval(
                 child: cachedNetworkImageCustom(
-                  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcStvL8kNVKvJskGpi8do02RNw2bn3sKxTTJ2g&s"   ),
+                  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcStvL8kNVKvJskGpi8do02RNw2bn3sKxTTJ2g&s",
+                ),
               ),
             ),
 
@@ -50,23 +55,37 @@ class _ProfileScreenState extends State<ProfileScreen> {
             SettingTile(
               title: "View profile",
               icon: ImageUtility.profileFillIcon,
+              onTap: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context) => EditProfileScreen()));
+              },
             ),
             SettingTile(
               title: "Support Customer",
               icon: ImageUtility.supportIcon,
+              onTap: (){
+              },
             ),
             SettingTile(
               title: "Payment history",
               icon: ImageUtility.paymentHistoryIcon,
+              onTap: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context) => PaymentHistoryScreen()));
+              },
             ),
             SettingTile(
               title: "Trips history",
               icon: ImageUtility.tripHistoryIcon,
+                onTap: (){
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => TripsHistoryScreen()));
+                },
+
             ),
             SettingTile(
               title: "Logout",
               icon: ImageUtility.logOutIcon,
               isSuffix: false,
+              onTap: (){
+              },
             ),
           ],
         ),
@@ -98,18 +117,19 @@ class SettingTile extends StatelessWidget {
   final String title;
   final String icon;
   final bool isSuffix;
+  final VoidCallback onTap;
 
   const SettingTile({
     super.key,
     required this.title,
     required this.icon,
-    this.isSuffix = true,
+    this.isSuffix = true, required this.onTap,
   });
 
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: () {},
+      onTap: onTap,
       child: Container(
         padding: EdgeInsets.all(15.w),
         child: Row(

@@ -26,7 +26,7 @@ class StyleUtility {
       fontSize: TextSizeUtility.textSize16,
       color: Colors.black);
 
-  static TextStyle buttonTextStyle = GoogleFonts.kantumruyPro(
+  static TextStyle buttonTextStyle = GoogleFonts.manrope(
       fontWeight: FontWeight.w500,
       fontSize: TextSizeUtility.textSize16.sp,
       color: Colors.white
@@ -97,12 +97,48 @@ class StyleUtility {
       fontSize: TextSizeUtility.textSize14,
       color: ColorUtility.color767C8C);
 
+  static TextStyle manropeMedium10ColorWhite = GoogleFonts.manrope(
+      fontWeight: FontWeight.w500,
+      fontSize: TextSizeUtility.textSize10,
+      color: Colors.white);
+
+  static TextStyle manropeMedium14Color719191A = GoogleFonts.manrope(
+      fontWeight: FontWeight.w500,
+      fontSize: TextSizeUtility.textSize14,
+      color: ColorUtility.color19191A);
+
+
+  static TextStyle manropeSemiBold16Color19191A = GoogleFonts.manrope(
+      fontWeight: FontWeight.w500,
+      fontSize: TextSizeUtility.textSize16,
+      color: ColorUtility.color19191A);
+
+  static TextStyle manropeRegular14Color8D98AF = GoogleFonts.manrope(
+      fontWeight: FontWeight.w500,
+      fontSize: TextSizeUtility.textSize14,
+      color: ColorUtility.color8D98AF);
+
+
+
+
+
+
+
+
+
+
+
 
 
   static TextStyle manropeMedium16Color848B9D = GoogleFonts.manrope(
       fontWeight: FontWeight.w600,
       fontSize: TextSizeUtility.textSize16,
       color: ColorUtility.color848B9D);
+
+  static TextStyle manropeMedium14colorBlack = GoogleFonts.manrope(
+      fontWeight: FontWeight.w500,
+      fontSize: TextSizeUtility.textSize14,
+      color: Colors.black);
 
 
 

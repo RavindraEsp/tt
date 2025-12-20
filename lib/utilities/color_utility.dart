@@ -13,6 +13,7 @@ class ColorUtility {
 
   static const Color backgroundColor = Color(0xFFF5F6FA);
   static const Color textFieldBorderColor = Color(0xFFB1B1B1);
+  static const Color cardBorderColor = Color(0xFFF0F1F5);
   static const Color color0E0E0E = Color(0xFF0E0E0E);
   static const Color color848B9D = Color(0xFF848B9D);
   static const Color color484C52 = Color(0xFF484C52);
@@ -20,6 +21,9 @@ class ColorUtility {
   static const Color color364B63 = Color(0xFF364B63);
   static const Color color1E1E2D = Color(0xFF1E1E2D);
   static const Color colorF0F1F5 = Color(0xFFF0F1F5);
+  static const Color color19191A = Color(0xFF19191A);
+
+  static const Color color8D98AF = Color(0xFF8D98AF);
 
 
 

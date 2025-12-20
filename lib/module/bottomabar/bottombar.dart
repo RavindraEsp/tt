@@ -5,6 +5,9 @@ import 'package:book_your_truck/utilities/style_utility.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+import 'help/help_screen.dart';
+import 'my_booking.dart';
+
 class BottomNavigationBarScreen extends StatefulWidget {
   const BottomNavigationBarScreen({super.key});
 
@@ -25,22 +28,8 @@ class _BottomNavigationBarScreenState extends State<BottomNavigationBarScreen> {
         ],
       ),
     ),
-    Center(
-      child: Column(
-        children: [
-          SizedBox(height: 100),
-          Text("Second", style: StyleUtility.inputTextStyle),
-        ],
-      ),
-    ),
-    Center(
-      child: Column(
-        children: [
-          SizedBox(height: 100),
-          Text("third", style: StyleUtility.inputTextStyle),
-        ],
-      ),
-    ),
+    MyBookingsScreen(),
+    HelpScreen(),
     ProfileScreen()
   ];
 
