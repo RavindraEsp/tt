@@ -3,7 +3,7 @@ import 'package:book_your_truck/widgets/common_app_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../widgets/trip_card.dart';
+import '../../widgets/trip_card.dart';
 
 class TripsHistoryScreen extends StatelessWidget {
   const TripsHistoryScreen({super.key});

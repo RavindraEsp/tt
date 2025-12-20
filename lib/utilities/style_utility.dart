@@ -173,6 +173,21 @@ class StyleUtility {
       fontSize: TextSizeUtility.textSize14,
       color: ColorUtility.color364B63);
 
+  static TextStyle nunitoRegular13color132235TextStyle = GoogleFonts.nunito(
+      fontWeight: FontWeight.w400,
+      fontSize: TextSizeUtility.textSize13,
+      color: ColorUtility.color132235);
+
+
+
+  static TextStyle nunitobold13colorBlackTextStyle = GoogleFonts.nunito(
+      fontWeight: FontWeight.bold,
+      fontSize: TextSizeUtility.textSize12,
+      color: Colors.black);
+
+
+
+
 
 
 

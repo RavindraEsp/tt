@@ -6,7 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'help/help_screen.dart';
-import 'my_booking.dart';
+import 'bookings/my_booking.dart';
 
 class BottomNavigationBarScreen extends StatefulWidget {
   const BottomNavigationBarScreen({super.key});

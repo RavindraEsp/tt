@@ -3,12 +3,13 @@ import 'package:book_your_truck/utilities/style_utility.dart';
 import 'package:book_your_truck/utilities/text_size_utility.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-class TripCard extends StatelessWidget
-{
+
+class TripCard extends StatelessWidget {
   final String status;
   final String time;
   final String price;
   final String image;
+  final VoidCallback? onTap;
 
   const TripCard({
     super.key,
@@ -16,6 +17,7 @@ class TripCard extends StatelessWidget
     required this.time,
     required this.price,
     required this.image,
+    this.onTap,
   });
 
   @override
@@ -150,11 +152,14 @@ class TripCard extends StatelessWidget
               // Container(
               //   width: 12,height: 12,color: Colors.green,
               // ),
-              Container(
-                width: 38,
-                child: CircleAvatar(
-                  backgroundColor: Color(0xFFF1F3F5),
-                  child: Icon(Icons.keyboard_arrow_down, size: 24.sp),
+              GestureDetector(
+                onTap: onTap ?? () {},
+                child: Container(
+                  width: 38,
+                  child: CircleAvatar(
+                    backgroundColor: Color(0xFFF1F3F5),
+                    child: Icon(Icons.keyboard_arrow_down, size: 24.sp),
+                  ),
                 ),
               ),
             ],

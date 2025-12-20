@@ -1,10 +1,11 @@
+import 'package:book_your_truck/module/bottomabar/bookings/booking_details/booking_details_screen.dart';
 import 'package:book_your_truck/utilities/color_utility.dart';
 import 'package:book_your_truck/utilities/style_utility.dart';
 import 'package:book_your_truck/utilities/text_size_utility.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../../widgets/trip_card.dart';
+import '../../../widgets/trip_card.dart';
 
 class MyBookingsScreen extends StatefulWidget {
   const MyBookingsScreen({super.key});
@@ -85,6 +86,10 @@ class _MyBookingsScreenState extends State<MyBookingsScreen> {
             time: "12:00 Pm",
             price: "₹1500",
             image: "",
+            onTap: (){
+              Navigator.push(context, MaterialPageRoute(builder: (context) => BookingDetailsScreen()));
+
+            },
           ),
         );
       },

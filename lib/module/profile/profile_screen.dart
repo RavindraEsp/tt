@@ -4,7 +4,7 @@ import 'package:book_your_truck/module/profile/edit_profile_screen.dart';
 import 'package:book_your_truck/utilities/color_utility.dart';
 import 'package:book_your_truck/utilities/image_utility.dart';
 import 'package:book_your_truck/utilities/style_utility.dart';
-import 'package:book_your_truck/utilities/trip_history_screen.dart';
+import 'package:book_your_truck/module/profile/trip_history_screen.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
