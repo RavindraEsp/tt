@@ -62,6 +62,7 @@ class MyApp extends StatelessWidget {
       // child:  ProfileScreen(),
      //  child:  BottomNavigationBarScreen(),
        child:  SplashScreen(),
+
     //   child:  BookingDetailsScreen(),
     );
   }
